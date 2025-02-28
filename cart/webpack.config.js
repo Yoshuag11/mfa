@@ -1,22 +1,23 @@
 // @ts-check
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const port = 8080;
+const port = 8082;
 
 module.exports = {
-  mode: "development",
   devServer: {
     port,
   },
+  mode: "development",
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
+      template: "public/index.html",
     }),
     new ModuleFederationPlugin({
-      remotes: {
-        cart: "cart@http://localhost:8082/remoteEntry.js",
-        products: "products@http://localhost:8081/remoteEntry.js",
+      exposes: {
+        "./CartShow": "./src/index", // relative or absolute paths must be used
       },
+      filename: "remoteEntry.js",
+      name: "cart",
     }),
   ],
 };
