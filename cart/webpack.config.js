@@ -19,6 +19,11 @@ module.exports = {
       filename: "remoteEntry.js",
       name: "cart",
       shared: ["@faker-js/faker"],
+      // shared: {
+      //   "@faker-js/faker": {
+      //     singleton: true,
+      //   },
+      // },
     }),
   ],
 };

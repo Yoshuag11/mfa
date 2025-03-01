@@ -22,8 +22,8 @@ importers:
         version: 5.2.0(webpack-cli@6.0.1)(webpack@5.98.0)
     devDependencies:
       '@faker-js/faker':
-        specifier: ^9.5.1
-        version: 9.5.1
+        specifier: ^8.4.1
+        version: 8.4.1
 
 packages:
 
@@ -31,9 +31,9 @@ packages:
     resolution: {integrity: sha512-4B4OijXeVNOPZlYA2oEwWOTkzyltLao+xbotHQeqN++Rv27Y6s818+n2Qkp8q+Fxhn0t/5lA5X1Mxktud8eayQ==}
     engines: {node: '>=14.17.0'}
 
-  '@faker-js/faker@9.5.1':
-    resolution: {integrity: sha512-0fzMEDxkExR2cn731kpDaCCnBGBUOIXEi2S1N5l8Hltp6aPf4soTMJ+g4k8r2sI5oB+rpwIW8Uy/6jkwGpnWPg==}
-    engines: {node: '>=18.0.0', npm: '>=9.0.0'}
+  '@faker-js/faker@8.4.1':
+    resolution: {integrity: sha512-XQ3cU+Q8Uqmrbf2e0cIC/QN43sTBSC8KF12u29Mb47tWrt2hAgBXSgpZMj4Ao8Uk0iJcU99QsOCaIL8934obCg==}
+    engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13'}
 
   '@jridgewell/gen-mapping@0.3.8':
     resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
@@ -1329,7 +1329,7 @@ snapshots:
 
   '@discoveryjs/json-ext@0.6.3': {}
 
-  '@faker-js/faker@9.5.1': {}
+  '@faker-js/faker@8.4.1': {}
 
   '@jridgewell/gen-mapping@0.3.8':
     dependencies:
