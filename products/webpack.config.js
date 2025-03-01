@@ -4,10 +4,10 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const port = 8081;
 
 module.exports = {
-  mode: "development",
   devServer: {
     port,
   },
+  mode: "development",
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
