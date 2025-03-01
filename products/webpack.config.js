@@ -18,6 +18,7 @@ module.exports = {
       },
       filename: "remoteEntry.js",
       name: "products",
+      shared: ["@faker-js/faker"],
     }),
   ],
 };
