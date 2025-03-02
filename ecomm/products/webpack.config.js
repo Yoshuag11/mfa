@@ -14,10 +14,10 @@ module.exports = {
     }),
     new ModuleFederationPlugin({
       exposes: {
-        "./ProductsIndex": "./src/index",
+        "./ProductsIndex": "./src/bootstrap",
       },
       filename: "remoteEntry.js",
-      name: "products",
+      name: "Products",
       shared: ["@faker-js/faker"],
       // shared: {
       //   "@faker-js/faker": {

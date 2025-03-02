@@ -1,14 +1,26 @@
 // @ts-check
 import { faker } from "@faker-js/faker";
 
-const cartText = `<div>You have ${faker.number.int({
-  max: 44,
-})} items in your cart</div>`;
+/**
+ *
+ * @param {Element} el Element to insert cart content
+ */
+export function mount(el) {
+  const cartText = `<div>You have ${faker.number.int({
+    max: 44,
+  })} items in your cart</div>`;
 
-const devCartElement = document.getElementById("cart-dev");
+  el.innerHTML = cartText;
+}
 
-if (devCartElement !== null) {
-  devCartElement.innerHTML = cartText;
+if (process.env.NODE_ENV === "development") {
+  const devCartElement = document.getElementById("cart-dev");
+
+  if (devCartElement !== null) {
+    mount(devCartElement);
+  }
 }
 
 console.log("Cart Component");
+
+export default mount;

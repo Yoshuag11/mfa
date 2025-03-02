@@ -14,10 +14,10 @@ module.exports = {
     }),
     new ModuleFederationPlugin({
       exposes: {
-        "./CartShow": "./src/index", // relative or absolute paths must be used
+        "./CartShow": "./src/bootstrap", // relative or absolute paths must be used
       },
       filename: "remoteEntry.js",
-      name: "cart",
+      name: "Cart",
       shared: ["@faker-js/faker"],
       // shared: {
       //   "@faker-js/faker": {

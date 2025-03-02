@@ -14,8 +14,8 @@ module.exports = {
     }),
     new ModuleFederationPlugin({
       remotes: {
-        cart: "cart@http://localhost:8082/remoteEntry.js",
-        products: "products@http://localhost:8081/remoteEntry.js",
+        Cart: "Cart@http://localhost:8082/remoteEntry.js",
+        Products: "Products@http://localhost:8081/remoteEntry.js",
       },
     }),
   ],
