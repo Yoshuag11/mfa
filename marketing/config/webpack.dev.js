@@ -6,7 +6,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const packageJson = require("../package.json");
 const commonConfig = require("./webpack.common");
 const port = 8081;
-const devConfig = {
+const config = {
   devServer: {
     historyApiFallback: {
       index: "index.html",
@@ -31,4 +31,4 @@ const devConfig = {
   ],
 };
 
-module.exports = merge(commonConfig, devConfig);
+module.exports = merge(commonConfig, config);
