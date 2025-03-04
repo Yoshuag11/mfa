@@ -8,13 +8,19 @@ on:
       - "container/**"
 defaults:
   run:
-    working-directory: container
+    working-directory: ./container
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: corepack enable pnpm
+      - run: ls -la
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.5.2
       - run: pnpm install
       - run: pnpm run build
       - uses: keithweaver/aws-s3-github-action@v1.0.0
